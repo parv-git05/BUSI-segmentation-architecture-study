@@ -1,0 +1,39 @@
+# Experiment Report: Focal (Attention U-Net)
+
+- **Experiment Name:** `Focal`
+- **Architecture:** Attention U-Net (31,387,049 trainable parameters)
+- **Loss Formulation:** Binary Focal Loss (Lin et al., 2017)
+- **Loss Parameters:**
+  - `alpha`: `0.25`
+  - `gamma`: `2.0`
+  - `from_logits`: `True`
+  - `reduction`: `mean`
+- **Training Configuration:**
+  - **Optimizer:** Adam (lr=1e-4, weight_decay=1e-4)
+  - **Batch Size:** 16
+  - **Epochs:** 100
+  - **Early Stopping:** DISABLED
+  - **LR Scheduler:** ReduceLROnPlateau (mode=min, factor=0.5, patience=10)
+  - **Random Seed:** 42
+  - **Input Size:** 256 × 256, Grayscale (1 channel)
+  - **Normalization:** [0.0, 1.0]
+  - **Data Augmentation:** Horizontal Flip (p=0.5), Vertical Flip (p=0.5), Rotation (±15°)
+- **Dataset / Split Information:**
+  - **Cohort:** BUSI Phase-1 single-mask dataset (628 samples)
+  - **Split:** Master Split (Train: 440, Validation: 125, Test: 63)
+  - **Test Set Status:** LOCKED & UNTOUCHED (0 test samples accessed or evaluated)
+- **Best Epoch:** 66
+- **Best Validation Metrics (Mean ± Std):**
+  - **Dice:** **0.6787 ± 0.3149**
+  - **IoU:** 0.5860 ± 0.3076
+  - **Precision:** 0.7344 ± 0.3141
+  - **Recall:** 0.7102 ± 0.3371
+  - **Specificity:** 0.9827 ± 0.0299
+  - **HD95:** 37.85 ± 39.15 px (117/125 valid cases)
+  - **NSD @ 1px:** 0.3026 ± 0.2367
+  - **NSD @ 2px:** 0.4206 ± 0.2985
+  - **NSD @ 3px:** 0.5012 ± 0.3254
+- **Checkpoint Locations:**
+  - Best Checkpoint: `F:\BUSI-segmentation-architecture-study\5_Models\Best_Architecture\Focal\checkpoints\best_model.pth`
+  - Latest Checkpoint: `F:\BUSI-segmentation-architecture-study\5_Models\Best_Architecture\Focal\checkpoints\latest.pth`
+- **Training Duration:** 30.18 minutes

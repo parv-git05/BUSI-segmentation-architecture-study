@@ -1,0 +1,48 @@
+{
+    "experiment_name": "BCE_Dice",
+    "architecture": "Attention U-Net",
+    "trainable_parameters": 31387049,
+    "checkpoint_file": "f:\\BUSI-segmentation-architecture-study\\5_Models\\Best_Architecture\\BCE_Dice\\checkpoints\\best_model.pth",
+    "checkpoint_epoch": 97,
+    "loss_formulation": "Combined Binary Cross-Entropy and Soft Dice Loss (BCEDiceLoss)",
+    "loss_hyperparameters": {
+        "bce_weight": 1.0,
+        "dice_weight": 1.0,
+        "smooth": 1e-06,
+        "from_logits": true,
+        "reduction": "mean"
+    },
+    "training_optimizer": "Adam (lr=1e-4, weight_decay=1e-4)",
+    "inference_threshold": 0.5,
+    "preprocessing": {
+        "mode": "deterministic validation/test preprocessing",
+        "channels": 1,
+        "color_mode": "grayscale",
+        "spatial_size": [
+            256,
+            256
+        ],
+        "image_interpolation": "BILINEAR",
+        "mask_interpolation": "NEAREST",
+        "value_range": [
+            0.0,
+            1.0
+        ],
+        "test_time_augmentation": false
+    },
+    "test_manifest": "f:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\test_10.csv",
+    "test_sample_count": 63,
+    "evaluation_timestamp": "2026-10-08 11:16:53",
+    "environment": {
+        "python_version": "3.11.9",
+        "torch_version": "2.5.1+cu121",
+        "cuda_available": true,
+        "cuda_device": "NVIDIA RTX A4000",
+        "os": "Windows-10-10.0.26200-SP0"
+    },
+    "model_selection_policy": {
+        "selection_criterion": "Highest validation Dice macro-average",
+        "selection_subset": "val_20.csv (125 samples)",
+        "test_set_access_status": "LOCKED until final evaluation; 0 test samples accessed during selection or training"
+    }
+}

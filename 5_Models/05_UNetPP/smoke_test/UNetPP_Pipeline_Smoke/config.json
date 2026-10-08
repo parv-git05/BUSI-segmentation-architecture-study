@@ -1,0 +1,33 @@
+{
+    "experiment_name": "UNetPP_Smoke_Test",
+    "architecture_name": "UNetPlusPlus",
+    "seed": 42,
+    "train_manifest_path": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\train_70.csv",
+    "val_manifest_path": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\val_20.csv",
+    "test_manifest_path": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\test_10.csv",
+    "dataset_root": null,
+    "input_size": [
+        256,
+        256
+    ],
+    "img_channels": 1,
+    "normalize_range": [
+        0.0,
+        1.0
+    ],
+    "batch_size": 8,
+    "epochs": 2,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "optimizer_name": "Adam",
+    "scheduler_name": "ReduceLROnPlateau",
+    "scheduler_patience": 10,
+    "scheduler_factor": 0.5,
+    "loss_fn_name": "DiceLoss",
+    "dice_smooth": 1e-06,
+    "target_metric": "val_dice",
+    "validation_frequency": 1,
+    "num_workers": 0,
+    "device": "cuda",
+    "output_dir": "F:\\BUSI-segmentation-architecture-study\\5_Models\\05_UNetPP\\smoke_test"
+}

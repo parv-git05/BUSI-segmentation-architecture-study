@@ -1,0 +1,29 @@
+{
+    "experiment_name": "AttentionUNet_Smoke_Test",
+    "architecture_name": "AttentionUNet",
+    "best_epoch": 2,
+    "best_target_metric": 0.35907257526036446,
+    "total_epochs_trained": 2,
+    "total_time_seconds": 43.855475425720215,
+    "final_val_metrics": {
+        "dice_mean": 0.35907257526036446,
+        "dice_std": 0.2503064875988217,
+        "iou_mean": 0.2503643063049645,
+        "iou_std": 0.20951850240443906,
+        "precision_mean": 0.28730344699089877,
+        "precision_std": 0.2577445699486266,
+        "recall_mean": 0.7869386374749499,
+        "recall_std": 0.30800056294526373,
+        "specificity_mean": 0.8267588640788337,
+        "specificity_std": 0.0987539698628756,
+        "hd95_mean": 108.86811273332509,
+        "hd95_std": 40.47813634852871,
+        "hd95_valid_count": 123,
+        "nsd_1px_mean": 0.07126086629564608,
+        "nsd_1px_std": 0.0735525130431344,
+        "nsd_2px_mean": 0.10709628911778656,
+        "nsd_2px_std": 0.09827468784671806,
+        "nsd_3px_mean": 0.14456109007431514,
+        "nsd_3px_std": 0.11839453496963763
+    }
+}

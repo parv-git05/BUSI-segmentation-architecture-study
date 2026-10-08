@@ -1,0 +1,29 @@
+{
+    "experiment_name": "ResidualUNet_Smoke_Test",
+    "architecture_name": "ResidualUNet",
+    "best_epoch": 2,
+    "best_target_metric": 0.3442097900551099,
+    "total_epochs_trained": 2,
+    "total_time_seconds": 39.984336614608765,
+    "final_val_metrics": {
+        "dice_mean": 0.3442097900551099,
+        "dice_std": 0.24020548607894612,
+        "iou_mean": 0.23599548348285032,
+        "iou_std": 0.1959528318717962,
+        "precision_mean": 0.2839068716481973,
+        "precision_std": 0.2680452811788811,
+        "recall_mean": 0.7715575830868701,
+        "recall_std": 0.2973912284978306,
+        "specificity_mean": 0.8233367697426474,
+        "specificity_std": 0.09836925178981541,
+        "hd95_mean": 111.84529865607057,
+        "hd95_std": 41.54524592304225,
+        "hd95_valid_count": 125,
+        "nsd_1px_mean": 0.08289140875456479,
+        "nsd_1px_std": 0.06824765670492863,
+        "nsd_2px_mean": 0.12301268548654215,
+        "nsd_2px_std": 0.09267905517966026,
+        "nsd_3px_mean": 0.16179968015130566,
+        "nsd_3px_std": 0.11423229348758847
+    }
+}

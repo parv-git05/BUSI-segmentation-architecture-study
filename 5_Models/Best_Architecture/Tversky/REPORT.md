@@ -1,0 +1,40 @@
+# Experiment Report: Tversky (Attention U-Net)
+
+- **Experiment Name:** `Tversky`
+- **Architecture:** Attention U-Net (31,387,049 trainable parameters)
+- **Loss Formulation:** Tversky Loss (Salehi et al., 2017)
+- **Loss Parameters:**
+  - `alpha`: `0.7`
+  - `beta`: `0.3`
+  - `smooth`: `1e-6`
+  - `from_logits`: `True`
+  - `reduction`: `mean`
+- **Training Configuration:**
+  - **Optimizer:** Adam (lr=1e-4, weight_decay=1e-4)
+  - **Batch Size:** 16
+  - **Epochs:** 100
+  - **Early Stopping:** DISABLED
+  - **LR Scheduler:** ReduceLROnPlateau (mode=min, factor=0.5, patience=10)
+  - **Random Seed:** 42
+  - **Input Size:** 256 × 256, Grayscale (1 channel)
+  - **Normalization:** [0.0, 1.0]
+  - **Data Augmentation:** Horizontal Flip (p=0.5), Vertical Flip (p=0.5), Rotation (±15°)
+- **Dataset / Split Information:**
+  - **Cohort:** BUSI Phase-1 single-mask dataset (628 samples)
+  - **Split:** Master Split (Train: 440, Validation: 125, Test: 63)
+  - **Test Set Status:** LOCKED & UNTOUCHED (0 test samples accessed or evaluated)
+- **Best Epoch:** 98
+- **Best Validation Metrics (Mean ± Std):**
+  - **Dice:** **0.7282 ± 0.2623**
+  - **IoU:** 0.6264 ± 0.2650
+  - **Precision:** 0.7337 ± 0.2559
+  - **Recall:** 0.8101 ± 0.2826
+  - **Specificity:** 0.9751 ± 0.0362
+  - **HD95:** 47.44 ± 51.97 px (122/125 valid cases)
+  - **NSD @ 1px:** 0.3044 ± 0.2035
+  - **NSD @ 2px:** 0.4503 ± 0.2651
+  - **NSD @ 3px:** 0.5544 ± 0.2901
+- **Checkpoint Locations:**
+  - Best Checkpoint: `F:\BUSI-segmentation-architecture-study\5_Models\Best_Architecture\Tversky\checkpoints\best_model.pth`
+  - Latest Checkpoint: `F:\BUSI-segmentation-architecture-study\5_Models\Best_Architecture\Tversky\checkpoints\latest.pth`
+- **Training Duration:** 31.20 minutes

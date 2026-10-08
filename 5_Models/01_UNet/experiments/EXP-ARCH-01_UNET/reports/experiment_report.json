@@ -1,0 +1,51 @@
+{
+    "experiment_id": "EXP-ARCH-01_UNET",
+    "architecture": "U-Net (Standard 2D Encoder-Decoder)",
+    "parameter_count": 31036481,
+    "dataset_cohort": "BUSI Phase-1 (628 samples)",
+    "split_counts": {
+        "train": 440,
+        "val": 125,
+        "test": 63
+    },
+    "locked_test_set_evaluated": false,
+    "input_shape": [
+        1,
+        256,
+        256
+    ],
+    "augmentation": "Horizontal flip (p=0.5), Vertical flip (p=0.5), Rotation +-15 deg",
+    "loss": "Binary Dice Loss (smooth=1e-6)",
+    "optimizer": "Adam (lr=1e-4, weight_decay=1e-4)",
+    "scheduler": "ReduceLROnPlateau (patience=10, factor=0.5)",
+    "total_epochs": 100,
+    "early_stopping": "DISABLED",
+    "best_epoch": 93,
+    "best_val_loss": 0.277677571401,
+    "best_val_dice": 0.7377470563605945,
+    "aggregate_validation_metrics": {
+        "dice_mean": 0.7377470563605945,
+        "dice_std": 0.2831461547124192,
+        "iou_mean": 0.6476802295190351,
+        "iou_std": 0.28629626971748046,
+        "precision_mean": 0.7997528654488866,
+        "precision_std": 0.25045193048394016,
+        "recall_mean": 0.7548606533847045,
+        "recall_std": 0.31761981996526745,
+        "specificity_mean": 0.9864066277791721,
+        "specificity_std": 0.02215842646174589,
+        "hd95_mean": 31.201870159919867,
+        "hd95_std": 35.75331567687706,
+        "hd95_valid_count": 118,
+        "nsd_1px_mean": 0.3655510532509233,
+        "nsd_1px_std": 0.2598073833588233,
+        "nsd_2px_mean": 0.5028811356138098,
+        "nsd_2px_std": 0.3215744795220267,
+        "nsd_3px_mean": 0.5852134936408203,
+        "nsd_3px_std": 0.3407246209187846
+    },
+    "training_duration_seconds": 1781.2350642681122,
+    "best_checkpoint_path": "F:\\BUSI-segmentation-architecture-study\\5_Models\\01_UNet\\experiments\\EXP-ARCH-01_UNET\\checkpoints\\best_model.pth",
+    "qualitative_predictions_path": "F:\\BUSI-segmentation-architecture-study\\5_Models\\01_UNet\\experiments\\EXP-ARCH-01_UNET\\qualitative_predictions\\val_qualitative_predictions.png",
+    "hd95_valid_samples": 118
+}

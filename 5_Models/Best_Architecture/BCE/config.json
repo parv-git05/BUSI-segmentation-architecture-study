@@ -1,0 +1,37 @@
+{
+    "experiment_name": "BCE",
+    "architecture": "AttentionUNet",
+    "loss_fn_name": "BCELoss",
+    "loss_parameters": {
+        "from_logits": true,
+        "reduction": "mean"
+    },
+    "seed": 42,
+    "epochs": 100,
+    "batch_size": 16,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "optimizer": "Adam",
+    "scheduler": "ReduceLROnPlateau",
+    "scheduler_patience": 10,
+    "scheduler_factor": 0.5,
+    "input_size": [
+        256,
+        256
+    ],
+    "img_channels": 1,
+    "normalization": [
+        0.0,
+        1.0
+    ],
+    "augmentation": {
+        "horizontal_flip_prob": 0.5,
+        "vertical_flip_prob": 0.5,
+        "rotation_degrees": 15.0
+    },
+    "train_manifest": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\train_70.csv",
+    "val_manifest": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\val_20.csv",
+    "test_manifest": "LOCKED - NOT ACCESSED",
+    "target_metric": "val_dice",
+    "early_stopping": "DISABLED"
+}

@@ -1,0 +1,23 @@
+{
+    "evaluation_timestamp": "2026-10-08 15:53:28",
+    "os": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.11.9",
+    "torch_version": "2.5.1+cu121",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA RTX A4000",
+    "models_evaluated": [
+        "U-Net",
+        "Attention U-Net",
+        "Residual U-Net",
+        "Attention Residual U-Net",
+        "U-Net++"
+    ],
+    "test_manifest": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\test_10.csv",
+    "input_dimensions": [
+        1,
+        256,
+        256
+    ],
+    "inference_threshold": 0.5,
+    "loss_function": "Dice Loss"
+}

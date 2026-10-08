@@ -1,0 +1,14 @@
+{
+    "architecture_name": "U-Net",
+    "architecture_key": "U_Net",
+    "checkpoint_file": "F:\\BUSI-segmentation-architecture-study\\5_Models\\01_UNet\\experiments\\EXP-ARCH-01_UNET\\checkpoints\\best_model.pth",
+    "checkpoint_epoch": 93,
+    "trainable_parameters": 31036481,
+    "loss_function": "DiceLoss (Baseline)",
+    "test_manifest": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\test_10.csv",
+    "test_sample_count": 63,
+    "inference_threshold": 0.5,
+    "preprocessing": "Grayscale, 256x256, [0,1], no augmentation",
+    "evaluation_duration_seconds": 1.991410493850708,
+    "timestamp": "2026-10-08 15:53:02"
+}

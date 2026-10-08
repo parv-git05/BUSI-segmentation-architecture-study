@@ -1,0 +1,14 @@
+{
+    "architecture_name": "Attention Residual U-Net",
+    "architecture_key": "Attention_Residual_U_Net",
+    "checkpoint_file": "F:\\BUSI-segmentation-architecture-study\\5_Models\\04_Attention_Residual_UNet\\experiments\\EXP-ARCH-04_ATTENTION_RESIDUAL_UNET\\checkpoints\\best_model.pth",
+    "checkpoint_epoch": 93,
+    "trainable_parameters": 32785641,
+    "loss_function": "DiceLoss (Baseline)",
+    "test_manifest": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\test_10.csv",
+    "test_sample_count": 63,
+    "inference_threshold": 0.5,
+    "preprocessing": "Grayscale, 256x256, [0,1], no augmentation",
+    "evaluation_duration_seconds": 2.5253100395202637,
+    "timestamp": "2026-10-08 15:53:19"
+}

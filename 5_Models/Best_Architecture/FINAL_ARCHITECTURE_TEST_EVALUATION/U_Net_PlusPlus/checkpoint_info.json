@@ -1,0 +1,14 @@
+{
+    "architecture_name": "U-Net++",
+    "architecture_key": "U_Net_PlusPlus",
+    "checkpoint_file": "F:\\BUSI-segmentation-architecture-study\\5_Models\\05_UNetPP\\experiments\\EXP-ARCH-05_UNETPP\\checkpoints\\best_model.pth",
+    "checkpoint_epoch": 88,
+    "trainable_parameters": 36164097,
+    "loss_function": "DiceLoss (Baseline)",
+    "test_manifest": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\test_10.csv",
+    "test_sample_count": 63,
+    "inference_threshold": 0.5,
+    "preprocessing": "Grayscale, 256x256, [0,1], no augmentation",
+    "evaluation_duration_seconds": 2.9436984062194824,
+    "timestamp": "2026-10-08 15:53:25"
+}

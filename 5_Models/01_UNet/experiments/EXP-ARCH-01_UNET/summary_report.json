@@ -1,0 +1,29 @@
+{
+    "experiment_name": "EXP-ARCH-01_UNET",
+    "architecture_name": "UNet",
+    "best_epoch": 93,
+    "best_target_metric": 0.7377470563605945,
+    "total_epochs_trained": 100,
+    "total_time_seconds": 1781.2350642681122,
+    "final_val_metrics": {
+        "dice_mean": 0.7065617393683126,
+        "dice_std": 0.25885156061839765,
+        "iou_mean": 0.5999250365025026,
+        "iou_std": 0.2731649516530087,
+        "precision_mean": 0.7511052627738415,
+        "precision_std": 0.2759209315802304,
+        "recall_mean": 0.7586505208200373,
+        "recall_std": 0.2840445949662595,
+        "specificity_mean": 0.9823126918690628,
+        "specificity_std": 0.025378885867539173,
+        "hd95_mean": 51.0288305846836,
+        "hd95_std": 45.54118183746483,
+        "hd95_valid_count": 123,
+        "nsd_1px_mean": 0.3461298883087798,
+        "nsd_1px_std": 0.23268129383117478,
+        "nsd_2px_mean": 0.4724042367988538,
+        "nsd_2px_std": 0.2803709355483444,
+        "nsd_3px_mean": 0.5552827329686699,
+        "nsd_3px_std": 0.2996617720958772
+    }
+}

@@ -1,0 +1,67 @@
+{
+  "dataset_source": "BUSI_phase1_manifest.csv",
+  "cohort_definition": "Phase-1 eligible single-mask ultrasound segmentation samples (excluding multi-mask and normal-class samples)",
+  "total_sample_count": 628,
+  "class_counts": {
+    "benign": 420,
+    "malignant": 208
+  },
+  "random_seed": 42,
+  "split_methodology": "Deterministic stratified allocation by class_id (benign=0, malignant=1) at image-level using NumPy RandomState seed 42",
+  "actual_split_counts": {
+    "train": 440,
+    "val": 125,
+    "test": 63,
+    "total": 628
+  },
+  "actual_split_proportions_percent": {
+    "train": 70.0637,
+    "val": 19.9045,
+    "test": 10.0318
+  },
+  "actual_class_distribution": {
+    "train": {
+      "benign": 294,
+      "malignant": 146,
+      "total": 440,
+      "benign_percent": 66.8182,
+      "malignant_percent": 33.1818
+    },
+    "val": {
+      "benign": 84,
+      "malignant": 41,
+      "total": 125,
+      "benign_percent": 67.2,
+      "malignant_percent": 32.8
+    },
+    "test": {
+      "benign": 42,
+      "malignant": 21,
+      "total": 63,
+      "benign_percent": 66.6667,
+      "malignant_percent": 33.3333
+    }
+  },
+  "creation_timestamp": "2026-09-29T06:44:22.402818+00:00",
+  "path_rebasing_info": {
+    "original_prefix": "D:\\Dataset_BUSI_with_GT",
+    "rebased_prefix": "F:\\Research_BUSI_Segmentation",
+    "verification": "100% of rebased image and mask paths exist on local storage."
+  },
+  "validation_audit_results": {
+    "status": "VERIFIED",
+    "checks": {
+      "TRAIN_VAL_DISJOINT": true,
+      "TRAIN_TEST_DISJOINT": true,
+      "VAL_TEST_DISJOINT": true,
+      "TOTAL_UNIQUE_628": true,
+      "SUM_SPLITS_628": true,
+      "NO_DUPLICATE_IMAGES": true,
+      "NO_DUPLICATE_MASKS": true,
+      "ALL_IMAGE_FILES_EXIST": true,
+      "ALL_MASK_FILES_EXIST": true,
+      "CORRECT_IMAGE_MASK_CORRESPONDENCE": true
+    }
+  },
+  "test_set_policy": "IMPORTANT: The test set (test_10.csv) is the FINAL LOCKED TEST SET. It MUST NOT be used for architecture selection, hyperparameter selection, loss selection, early stopping, or any other tuning decision."
+}

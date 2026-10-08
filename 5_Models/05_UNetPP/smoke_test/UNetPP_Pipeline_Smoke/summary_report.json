@@ -1,0 +1,29 @@
+{
+    "experiment_name": "UNetPP_Smoke_Test",
+    "architecture_name": "UNetPlusPlus",
+    "best_epoch": 2,
+    "best_target_metric": 0.33886391215775463,
+    "total_epochs_trained": 2,
+    "total_time_seconds": 69.77499055862427,
+    "final_val_metrics": {
+        "dice_mean": 0.33886391215775463,
+        "dice_std": 0.22760824966332327,
+        "iou_mean": 0.22887184124308288,
+        "iou_std": 0.18356099456309444,
+        "precision_mean": 0.2822609167063231,
+        "precision_std": 0.2539579118906812,
+        "recall_mean": 0.7803000087089007,
+        "recall_std": 0.2886718242717628,
+        "specificity_mean": 0.8091827259879422,
+        "specificity_std": 0.10830768120038163,
+        "hd95_mean": 117.77434383221583,
+        "hd95_std": 40.750427151297956,
+        "hd95_valid_count": 125,
+        "nsd_1px_mean": 0.0726699196791728,
+        "nsd_1px_std": 0.061030418417861776,
+        "nsd_2px_mean": 0.11194005995667423,
+        "nsd_2px_std": 0.0861243255146505,
+        "nsd_3px_mean": 0.1503426976679142,
+        "nsd_3px_std": 0.10994906474564567
+    }
+}

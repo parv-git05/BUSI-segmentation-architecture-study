@@ -1,0 +1,50 @@
+{
+    "experiment_id": "EXP-ARCH-02_ATTENTION_UNET",
+    "architecture": "Attention U-Net (Oktay et al., 2018)",
+    "parameter_count": 31387049,
+    "dataset_cohort": "BUSI Phase-1 (628 samples)",
+    "split_counts": {
+        "train": 440,
+        "val": 125,
+        "test": 63
+    },
+    "locked_test_set_evaluated": false,
+    "input_shape": [
+        1,
+        256,
+        256
+    ],
+    "augmentation": "Horizontal flip (p=0.5), Vertical flip (p=0.5), Rotation +-15 deg",
+    "loss": "Binary Dice Loss (smooth=1e-6)",
+    "optimizer": "Adam (lr=1e-4, weight_decay=1e-4)",
+    "scheduler": "ReduceLROnPlateau (patience=10, factor=0.5)",
+    "total_epochs": 100,
+    "early_stopping": "DISABLED",
+    "best_epoch": 96,
+    "best_val_dice": 0.7526600637582701,
+    "aggregate_validation_metrics": {
+        "dice_mean": 0.7526600637582701,
+        "dice_std": 0.26420215619591897,
+        "iou_mean": 0.6602159662832502,
+        "iou_std": 0.2730319655763221,
+        "precision_mean": 0.8152420900493743,
+        "precision_std": 0.24610557863523488,
+        "recall_mean": 0.7666034744782559,
+        "recall_std": 0.2904715487388545,
+        "specificity_mean": 0.9834239273183876,
+        "specificity_std": 0.03194218739091812,
+        "hd95_mean": 31.46927453461665,
+        "hd95_std": 36.24483000571547,
+        "hd95_valid_count": 121,
+        "nsd_1px_mean": 0.39685872799753213,
+        "nsd_1px_std": 0.2769911392562085,
+        "nsd_2px_mean": 0.5196325294485394,
+        "nsd_2px_std": 0.31876398989157817,
+        "nsd_3px_mean": 0.5971507057669689,
+        "nsd_3px_std": 0.3263209018292191
+    },
+    "training_duration_seconds": 1905.24,
+    "best_checkpoint_path": "f:\\BUSI-segmentation-architecture-study\\5_Models\\02_Attention_UNet\\experiments\\EXP-ARCH-02_ATTENTION_UNET\\checkpoints\\best_model.pth",
+    "qualitative_predictions_path": "f:\\BUSI-segmentation-architecture-study\\5_Models\\02_Attention_UNet\\experiments\\EXP-ARCH-02_ATTENTION_UNET\\qualitative_predictions\\val_qualitative_predictions.png",
+    "hd95_valid_samples": 121
+}

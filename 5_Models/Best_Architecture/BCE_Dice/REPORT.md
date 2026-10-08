@@ -1,0 +1,40 @@
+# Experiment Report: BCE_Dice (Attention U-Net)
+
+- **Experiment Name:** `BCE_Dice`
+- **Architecture:** Attention U-Net (31,387,049 trainable parameters)
+- **Loss Formulation:** Combined Binary Cross-Entropy and Soft Dice Loss
+- **Loss Parameters:**
+  - `bce_weight`: `1.0`
+  - `dice_weight`: `1.0`
+  - `smooth`: `1e-6`
+  - `from_logits`: `True`
+  - `reduction`: `mean`
+- **Training Configuration:**
+  - **Optimizer:** Adam (lr=1e-4, weight_decay=1e-4)
+  - **Batch Size:** 16
+  - **Epochs:** 100
+  - **Early Stopping:** DISABLED
+  - **LR Scheduler:** ReduceLROnPlateau (mode=min, factor=0.5, patience=10)
+  - **Random Seed:** 42
+  - **Input Size:** 256 × 256, Grayscale (1 channel)
+  - **Normalization:** [0.0, 1.0]
+  - **Data Augmentation:** Horizontal Flip (p=0.5), Vertical Flip (p=0.5), Rotation (±15°)
+- **Dataset / Split Information:**
+  - **Cohort:** BUSI Phase-1 single-mask dataset (628 samples)
+  - **Split:** Master Split (Train: 440, Validation: 125, Test: 63)
+  - **Test Set Status:** LOCKED & UNTOUCHED (0 test samples accessed or evaluated)
+- **Best Epoch:** 97
+- **Best Validation Metrics (Mean ± Std):**
+  - **Dice:** **0.7572 ± 0.2575**
+  - **IoU:** 0.6650 ± 0.2730
+  - **Precision:** 0.8188 ± 0.2250
+  - **Recall:** 0.7734 ± 0.2830
+  - **Specificity:** 0.9855 ± 0.0246
+  - **HD95:** 34.16 ± 39.91 px (124/125 valid cases)
+  - **NSD @ 1px:** 0.3957 ± 0.2554
+  - **NSD @ 2px:** 0.5270 ± 0.3005
+  - **NSD @ 3px:** 0.6102 ± 0.3103
+- **Checkpoint Locations:**
+  - Best Checkpoint: `F:\BUSI-segmentation-architecture-study\5_Models\Best_Architecture\BCE_Dice\checkpoints\best_model.pth`
+  - Latest Checkpoint: `F:\BUSI-segmentation-architecture-study\5_Models\Best_Architecture\BCE_Dice\checkpoints\latest.pth`
+- **Training Duration:** 27.37 minutes

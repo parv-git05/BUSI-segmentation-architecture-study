@@ -1,0 +1,30 @@
+{
+    "experiment_name": "Tversky",
+    "architecture": "AttentionUNet",
+    "loss_function": "TverskyLoss (Tversky Index Loss)",
+    "best_epoch": 98,
+    "best_val_dice": 0.7282293567774932,
+    "total_epochs": 100,
+    "training_time_seconds": 1871.9465148448944,
+    "validation_metrics": {
+        "dice_mean": 0.7282472069544554,
+        "dice_std": 0.26228399912006617,
+        "iou_mean": 0.6263828716685232,
+        "iou_std": 0.265038835959125,
+        "precision_mean": 0.7336954582792928,
+        "precision_std": 0.2558835728865951,
+        "recall_mean": 0.8100820222815305,
+        "recall_std": 0.2826013031036505,
+        "specificity_mean": 0.975091608681855,
+        "specificity_std": 0.0362333167691958,
+        "hd95_mean": 47.43629730856349,
+        "hd95_std": 51.96943807002405,
+        "hd95_valid_count": 122,
+        "nsd_1px_mean": 0.30437839202913575,
+        "nsd_1px_std": 0.2035271007180617,
+        "nsd_2px_mean": 0.4502545764338119,
+        "nsd_2px_std": 0.2650574132408321,
+        "nsd_3px_mean": 0.5543801178239428,
+        "nsd_3px_std": 0.2900625643449322
+    }
+}

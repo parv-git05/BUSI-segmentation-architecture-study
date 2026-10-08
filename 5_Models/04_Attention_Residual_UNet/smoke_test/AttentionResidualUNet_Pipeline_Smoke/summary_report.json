@@ -1,0 +1,29 @@
+{
+    "experiment_name": "AttentionResidualUNet_Smoke_Test",
+    "architecture_name": "AttentionResidualUNet",
+    "best_epoch": 2,
+    "best_target_metric": 0.4115798886931249,
+    "total_epochs_trained": 2,
+    "total_time_seconds": 42.623297929763794,
+    "final_val_metrics": {
+        "dice_mean": 0.4115798886931249,
+        "dice_std": 0.2477015832723918,
+        "iou_mean": 0.29186813604189993,
+        "iou_std": 0.2122523571529483,
+        "precision_mean": 0.358740633943793,
+        "precision_std": 0.2871108891015907,
+        "recall_mean": 0.7898784432279977,
+        "recall_std": 0.2871244633755117,
+        "specificity_mean": 0.8753562794785507,
+        "specificity_std": 0.08887806073846555,
+        "hd95_mean": 95.29321709067422,
+        "hd95_std": 38.45746164913406,
+        "hd95_valid_count": 125,
+        "nsd_1px_mean": 0.08521403654165338,
+        "nsd_1px_std": 0.0764710468259021,
+        "nsd_2px_mean": 0.12595279444639476,
+        "nsd_2px_std": 0.10614330718461788,
+        "nsd_3px_mean": 0.16729967960072478,
+        "nsd_3px_std": 0.1320399781973614
+    }
+}

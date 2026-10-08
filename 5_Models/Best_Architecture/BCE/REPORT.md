@@ -1,0 +1,37 @@
+# Experiment Report: BCE (Attention U-Net)
+
+- **Experiment Name:** `BCE`
+- **Architecture:** Attention U-Net (31,387,049 trainable parameters)
+- **Loss Formulation:** Binary Cross-Entropy Loss (with logits)
+- **Loss Parameters:**
+  - `from_logits`: `True`
+  - `reduction`: `mean`
+- **Training Configuration:**
+  - **Optimizer:** Adam (lr=1e-4, weight_decay=1e-4)
+  - **Batch Size:** 16
+  - **Epochs:** 100
+  - **Early Stopping:** DISABLED
+  - **LR Scheduler:** ReduceLROnPlateau (mode=min, factor=0.5, patience=10)
+  - **Random Seed:** 42
+  - **Input Size:** 256 × 256, Grayscale (1 channel)
+  - **Normalization:** [0.0, 1.0]
+  - **Data Augmentation:** Horizontal Flip (p=0.5), Vertical Flip (p=0.5), Rotation (±15°)
+- **Dataset / Split Information:**
+  - **Cohort:** BUSI Phase-1 single-mask dataset (628 samples)
+  - **Split:** Master Split (Train: 440, Validation: 125, Test: 63)
+  - **Test Set Status:** LOCKED & UNTOUCHED (0 test samples accessed or evaluated)
+- **Best Epoch:** 93
+- **Best Validation Metrics (Mean ± Std):**
+  - **Dice:** **0.7415 ± 0.2821**
+  - **IoU:** 0.6528 ± 0.2882
+  - **Precision:** 0.8124 ± 0.2640
+  - **Recall:** 0.7438 ± 0.3011
+  - **Specificity:** 0.9883 ± 0.0225
+  - **HD95:** 36.90 ± 37.25 px (121/125 valid cases)
+  - **NSD @ 1px:** 0.3916 ± 0.2582
+  - **NSD @ 2px:** 0.5191 ± 0.3082
+  - **NSD @ 3px:** 0.5958 ± 0.3217
+- **Checkpoint Locations:**
+  - Best Checkpoint: `F:\BUSI-segmentation-architecture-study\5_Models\Best_Architecture\BCE\checkpoints\best_model.pth`
+  - Latest Checkpoint: `F:\BUSI-segmentation-architecture-study\5_Models\Best_Architecture\BCE\checkpoints\latest.pth`
+- **Training Duration:** 27.13 minutes

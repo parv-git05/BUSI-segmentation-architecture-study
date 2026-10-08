@@ -1,0 +1,41 @@
+# Experiment Report: Dice_baseline (Attention U-Net Baseline)
+
+- **Experiment Name:** `Dice_baseline` (`EXP-ARCH-02_ATTENTION_UNET`)
+- **Architecture:** Attention U-Net (Oktay et al., 2018) — 31,387,049 trainable parameters
+- **Loss Formulation:** Binary Soft Dice Loss
+  $$\mathcal{L}_{\text{Dice}} = 1.0 - \frac{2 \sum (P \cdot G) + \epsilon}{\sum P + \sum G + \epsilon}$$
+- **Loss Parameters:**
+  - `smooth` ($\epsilon$): `1e-6`
+  - `from_logits`: `True`
+  - `reduction`: `mean`
+- **Training Configuration:**
+  - **Optimizer:** Adam ($\text{lr} = 1\times 10^{-4}$, $\text{weight\_decay} = 1\times 10^{-4}$)
+  - **Batch Size:** 16
+  - **Epochs:** 100
+  - **Early Stopping:** DISABLED
+  - **LR Scheduler:** ReduceLROnPlateau ($\text{mode}=\text{min}$, $\text{factor}=0.5$, $\text{patience}=10$)
+  - **Random Seed:** 42
+  - **Input Size:** $256 \times 256$, Grayscale (1 channel)
+  - **Normalization:** $[0.0, 1.0]$
+  - **Data Augmentation:** Horizontal Flip ($p=0.5$), Vertical Flip ($p=0.5$), Rotation ($\pm 15^\circ$)
+- **Dataset / Split Information:**
+  - **Source:** BUSI Phase-1 single-mask cohort (628 samples total)
+  - **Split:** Master Split (Train: 440, Validation: 125, Test: 63)
+  - **Test Set Status:** LOCKED & UNTOUCHED (0 test samples accessed or evaluated)
+- **Best Epoch:** 96 (Selected by Maximum Validation Dice)
+- **Best Validation Metrics (Mean ± Std):**
+  - **Dice:** **0.7527 ± 0.2642**
+  - **IoU:** **0.6602 ± 0.2730**
+  - **Precision:** **0.8152 ± 0.2461**
+  - **Recall:** **0.7666 ± 0.2905**
+  - **Specificity:** **0.9834 ± 0.0319**
+  - **HD95:** **31.47 ± 36.24 px** (121/125 valid cases)
+  - **NSD @ 1px:** **0.3969 ± 0.2770**
+  - **NSD @ 2px:** **0.5196 ± 0.3188**
+  - **NSD @ 3px:** **0.5972 ± 0.3263**
+- **Checkpoint Locations:**
+  - Best Checkpoint: `checkpoints/best_model.pth`
+  - Latest Checkpoint: `checkpoints/latest.pth`
+- **Observations:**
+  - Serves as the established benchmark baseline for Attention U-Net from the architecture comparison study.
+  - Dice loss directly optimizes the target evaluation metric (Dice coefficient) leading to strong boundary overlap, with a peak validation Dice of 0.7527 at epoch 96.

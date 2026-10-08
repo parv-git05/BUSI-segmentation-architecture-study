@@ -1,0 +1,14 @@
+{
+    "architecture_name": "Residual U-Net",
+    "architecture_key": "Residual_U_Net",
+    "checkpoint_file": "F:\\BUSI-segmentation-architecture-study\\5_Models\\03_Residual_UNet\\experiments\\EXP-ARCH-03_RESIDUAL_UNET\\checkpoints\\best_model.pth",
+    "checkpoint_epoch": 89,
+    "trainable_parameters": 32435073,
+    "loss_function": "DiceLoss (Baseline)",
+    "test_manifest": "F:\\BUSI-segmentation-architecture-study\\5_Models\\MASTER_SPLIT\\test_10.csv",
+    "test_sample_count": 63,
+    "inference_threshold": 0.5,
+    "preprocessing": "Grayscale, 256x256, [0,1], no augmentation",
+    "evaluation_duration_seconds": 2.2336835861206055,
+    "timestamp": "2026-10-08 15:53:13"
+}

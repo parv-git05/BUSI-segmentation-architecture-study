@@ -1,0 +1,120 @@
+# ============================================================
+# Python & Virtual Environments
+# ============================================================
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+bin/
+include/
+lib/
+lib64/
+share/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================
+# Testing & Code Quality
+# ============================================================
+.pytest_cache/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ============================================================
+# Model Weights & Checkpoints (Heavy Artifacts > 100MB)
+# ============================================================
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.h5
+*.onnx
+*.engine
+checkpoints/
+**/checkpoints/
+
+# ============================================================
+# Temporary Scripts & Scratch Directories
+# ============================================================
+scratch/
+temp/
+tmp/
+*.tmp
+
+# ============================================================
+# Logs & Experiment Tracking
+# ============================================================
+*.log
+logs/
+**/logs/
+orchestration_logs/
+runs/
+wandb/
+
+# ============================================================
+# Operating System & IDE Files
+# ============================================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# AI / Agent IDE artifacts
+.gemini/
+
+# ============================================================
+# Raw Dataset Images (Uncomment if storing dataset externally)
+# ============================================================
+# benign/
+# malignant/
+# normal/
+# "problems in multi masks/"
+
